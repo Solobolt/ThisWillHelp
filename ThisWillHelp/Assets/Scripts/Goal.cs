@@ -40,7 +40,7 @@ public class Goal : MonoBehaviour {
                     print("Index Number:" + (SceneManager.GetActiveScene().buildIndex + 1));
                     print("Scene Count:" + SceneManager.sceneCountInBuildSettings);
                     
-                    HealthController.totalHeath -= 0.075f;
+                    //HealthController.totalHeath -= 0.075f;
 
                     sceneMoved = true;
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

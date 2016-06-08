@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HealthController : MonoBehaviour {
 
-    public static float totalHeath = 0.80f;
+    public static float totalHeath = 0.6f;
 
 	// Use this for initialization
 	void Start () {

@@ -35,50 +35,50 @@ public class PlayerController : MonoBehaviour {
     void Controls() 
     {
         //handles key downs
-        if(Input.GetKeyDown("w"))
+        if (Input.GetKeyDown("w") || Input.GetKeyDown("up"))
         {
             print("Move Up");
             yDirection++;
         }
 
-        if (Input.GetKeyDown("s"))
+        if (Input.GetKeyDown("s") || Input.GetKeyDown("down"))
         {
             print("Move Down");
             yDirection--;
         }
 
-        if (Input.GetKeyDown("d"))
+        if (Input.GetKeyDown("d") || Input.GetKeyDown("right"))
         {
             print("Move Right");
             xDirection++;
         }
 
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKeyDown("a") || Input.GetKeyDown("left"))
         {
             print("Move Left");
             xDirection--;
         }
 
         //handles key ups
-        if (Input.GetKeyUp("w"))
+        if (Input.GetKeyUp("w") || Input.GetKeyUp("up"))
         {
             print("Stop Move Up");
             yDirection--;
         }
 
-        if (Input.GetKeyUp("s"))
+        if (Input.GetKeyUp("s") || Input.GetKeyUp("down"))
         {
             print("Stop Move Down");
             yDirection++;
         }
 
-        if (Input.GetKeyUp("d"))
+        if (Input.GetKeyUp("d") || Input.GetKeyUp("right"))
         {
             print("Stop Move Right");
             xDirection--;
         }
 
-        if (Input.GetKeyUp("a"))
+        if (Input.GetKeyUp("a") || Input.GetKeyUp("left"))
         {
             print("Stop Move Left");
             xDirection++;

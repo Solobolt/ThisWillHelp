@@ -22,7 +22,7 @@ public class Pill : MonoBehaviour {
         {
             gameManager.health = 0.2f;
 
-            HealthController.totalHeath += 0.2f;
+            HealthController.totalHeath += 0.14f;
             if (HealthController.totalHeath >= 1.0f)
             {
                 HealthController.totalHeath = 1.0f;
