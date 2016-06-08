@@ -4,6 +4,7 @@ using System.Collections;
 public class Pill : MonoBehaviour {
 
     private GameManager gameManager;
+    private float numOfPills = 4.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,7 @@ public class Pill : MonoBehaviour {
         {
             gameManager.health = 0.2f;
 
-            HealthController.totalHeath += 0.14f;
+            HealthController.totalHeath += 1.0f/numOfPills;
             if (HealthController.totalHeath >= 1.0f)
             {
                 HealthController.totalHeath = 1.0f;

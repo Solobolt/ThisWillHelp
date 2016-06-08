@@ -9,19 +9,21 @@ public class GameManager : MonoBehaviour {
     public float health;
 
     public UnityStandardAssets.ImageEffects.Bloom bloom;
-    private float bloomMax = 0.6f;
+    public float bloomMax = 0.6f;
 
     public UnityStandardAssets.ImageEffects.Blur blur;
-    private float blurMax = 3.0f;
+    public float blurMax = 3.0f;
 
     public UnityStandardAssets.ImageEffects.NoiseAndScratches noise;
-    private float noiseMax = 0.8f;
+    public float noiseMax = 0.8f;
 
     public AudioSource hospitalsfx;
-    private float pitchMax = 0.8f;
-    private float volumeMin = 0.86f;
-    private float volumeMax = 2.0f;
+    public float pitchMax = 0.8f;
+    public float volumeMin = 0.86f;
+    public float volumeMax = 2.0f;
 
+    public GameObject camera;
+    public float cameraSpeed = 10.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +42,11 @@ public class GameManager : MonoBehaviour {
             blur.iterations = Mathf.FloorToInt((1.0f - health) * blurMax);
             hospitalsfx.pitch = (health) * pitchMax;
             hospitalsfx.volume = volumeMin + ((1.0f - health) * (volumeMax - volumeMin));
+
+            if(health <= 0.21f)
+            {
+                camera.transform.rotation = Quaternion.Euler(90, camera.transform.rotation.eulerAngles.y + (cameraSpeed * Time.deltaTime), 0);
+            }
         }
         else
         {
