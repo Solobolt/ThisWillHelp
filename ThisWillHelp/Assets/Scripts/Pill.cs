@@ -21,7 +21,13 @@ public class Pill : MonoBehaviour {
         if(coll.gameObject.tag == "Player")
         {
             gameManager.health = 0.2f;
-            GameManager.totalHeath += 0.05f;
+
+            HealthController.totalHeath += 0.2f;
+            if (HealthController.totalHeath >= 1.0f)
+            {
+                HealthController.totalHeath = 1.0f;
+            }
+
             Destroy(this.gameObject);
             print("Changed Health");
         }

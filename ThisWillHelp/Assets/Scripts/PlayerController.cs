@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
@@ -81,6 +82,12 @@ public class PlayerController : MonoBehaviour {
         {
             print("Stop Move Left");
             xDirection++;
+        }
+
+        if(Input.GetKeyDown("r"))
+        {
+            SceneManager.LoadScene(1);
+            HealthController.totalHeath = 0.8f;
         }
     }
 }

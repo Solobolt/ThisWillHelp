@@ -4,7 +4,6 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
     public bool showEffects = true;
-    public static float totalHeath = 0.8f;
 
     [Range(0.0f,1.0f)]
     public float health;
@@ -20,11 +19,13 @@ public class GameManager : MonoBehaviour {
 
     public AudioSource hospitalsfx;
     private float pitchMax = 0.8f;
+    private float volumeMin = 0.86f;
+    private float volumeMax = 2.0f;
+
 
 	// Use this for initialization
 	void Start () {
-        health = totalHeath;
-
+        health = HealthController.totalHeath;
         print("bloom active");
         print("noise active");
         print("blur active");
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour {
             noise.grainIntensityMax = (1.0f - health) * noiseMax;
             blur.iterations = Mathf.FloorToInt((1.0f - health) * blurMax);
             hospitalsfx.pitch = (health) * pitchMax;
+            hospitalsfx.volume = volumeMin + ((1.0f - health) * (volumeMax - volumeMin));
         }
         else
         {

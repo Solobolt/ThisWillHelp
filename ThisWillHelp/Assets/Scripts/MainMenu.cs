@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        HealthController.totalHeath = 0.8f;
 	}
 	
 	// Update is called once per frame
