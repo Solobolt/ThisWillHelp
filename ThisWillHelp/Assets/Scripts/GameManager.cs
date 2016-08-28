@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        health = HealthController.totalHeath;
         print("bloom active");
         print("noise active");
         print("blur active");

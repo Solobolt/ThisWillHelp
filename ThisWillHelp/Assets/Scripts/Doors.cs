@@ -31,7 +31,7 @@ public class Doors : MonoBehaviour {
 
             player.gameObject.GetComponent<PlayerController>().enabled = false;
 
-            player.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(4.0f,0,0);
+            player.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(2.0f,0,0);
 
             if(player.gameObject.transform.position.x > 41.0f)
             {
